@@ -24,20 +24,23 @@ pipeline {
     }
     // This is build section
     stages {
-
+        
         stage('Deploy') {
             steps {
                 script{
                     withAWS(region:'us-east-1',credentials:'aws-creds') {
                         sh """
                             aws eks update-kubeconfig --region ${REGION} --name ${PROJECT}-${params.deploy_to}
+                            kubectl get nodes
                         """
                     }
-                    
                 }
             }
         }
+        
     }
+        
+    
 
 
     post {
