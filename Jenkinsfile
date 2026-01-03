@@ -23,6 +23,8 @@ pipeline {
         
     }
     // This is build section
+    stages {
+
         stage('Deploy') {
             steps {
                 script{
@@ -35,6 +37,7 @@ pipeline {
                 }
             }
         }
+    }
 
 
     post {
