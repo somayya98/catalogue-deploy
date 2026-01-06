@@ -1,6 +1,6 @@
 deployment:
-  imageRepo: somayya98/catalogue
-  imageVersion: v1
+  imageRepo: 930832106480.dkr.ecr.us-east-1.amazonaws.com/roboshop/catalogue
+  imageVersion: IMAGE_VERSION
 service: 
   type: ClusterIP
   servicePort: 8080
